@@ -1,0 +1,45 @@
+{
+  "name": "@jinshuju/eve-oidc",
+  "version": "0.1.0",
+  "description": "Eve-compatible Jinshuju OIDC route authentication",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "vitest run",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "prepack": "pnpm run test && pnpm run typecheck && pnpm run build"
+  },
+  "peerDependencies": {
+    "eve": "^0.24.6"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "eve": "0.24.6",
+    "typescript": "^6.0.0",
+    "vitest": "^4.1.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "packageManager": "pnpm@9.12.0"
+}
