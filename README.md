@@ -52,3 +52,14 @@ pnpm test
 pnpm typecheck
 pnpm build
 ```
+
+## Publishing
+
+The initial public version must be published interactively by an npm organization maintainer with publishing 2FA. After the package exists, configure its npm trusted publisher for:
+
+- GitHub organization: `jinshuju`
+- repository: `oidc`
+- workflow: `publish.yml`
+- allowed action: `npm publish`
+
+Subsequent `v*` tags use short-lived GitHub OIDC credentials and automatic npm provenance; no long-lived write token is stored in GitHub.

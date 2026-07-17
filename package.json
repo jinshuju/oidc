@@ -2,6 +2,14 @@
   "name": "@jinshuju/eve-oidc",
   "version": "0.1.0",
   "description": "Eve-compatible Jinshuju OIDC route authentication",
+  "homepage": "https://github.com/jinshuju/oidc#readme",
+  "bugs": {
+    "url": "https://github.com/jinshuju/oidc/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jinshuju/oidc.git"
+  },
   "license": "MIT",
   "type": "module",
   "sideEffects": false,
